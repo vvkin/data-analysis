@@ -1,0 +1,11 @@
+{
+    "categories": [{"category": "name"}, "category_id"],
+    "movies": [{"film": "name"}, "movie_id"],
+    "persons": [["name"], "person_id"],
+    "dates": [
+        [{"year_ceremony": "year"}, "date_id"],
+        [{"year_film": "year"}, "date_film_id"]
+    ],
+    "oscars": [["date_id", "person_id", "category_id", 
+        "ceremony_number", "is_winner"], "oscar_id"]
+}

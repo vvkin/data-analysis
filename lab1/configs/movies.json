@@ -1,0 +1,16 @@
+{
+    "genres": [{"genre": "name"}, "genre_id"],
+    "countries": [{"country": "name"}, "country_id"],
+    "languages": [{"language": "name"}, "language_id"],
+    "companies": [{"production_company": "name"}, "company_id"],
+    "persons": [
+        [{"director": "name"}, "director_id"],
+        [{"writer": "name"}, "writer_id"]
+    ],
+    "dates": [["year", "month", "day"], "date_id"],
+    "movies": [["name", "writer_id", "director_id", "genre_id", 
+        "language_id", "description", "company_id", "country_id"], "movie_id"],
+    "ranking_types": [["type_name"], "type_id"],
+    "ranking": [["critics_votes", "users_votes",
+        "type_id", "avg_vote", "votes"], "imdb_id"]
+}
