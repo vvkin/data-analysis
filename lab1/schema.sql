@@ -42,12 +42,6 @@ CREATE TABLE movies (
     description text
 );
 
-CREATE TABLE actors (
-    id serial PRIMARY KEY,
-    person_id int REFERENCES persons (id) NOT NULL,
-    movie_id int REFERENCES movies (id) NOT NULL
-);
-
 CREATE TABLE categories (
     id serial PRIMARY KEY,
     name varchar(255) NOT NULL
@@ -76,11 +70,12 @@ CREATE TABLE ranking (
     id serial PRIMARY KEY,
     type_id int REFERENCES ranking_types (id),
     users_score float,
-    critics_score float, 
+    users_norm float,
     users_votes int,
-    critics_votes int,
-    avg_vote float,
-    votes int
+    users_reviews int,
+    critics_score float, 
+    critics_norm float,
+    critics_reviews int
 );
 
 CREATE TABLE facts (
@@ -90,10 +85,11 @@ CREATE TABLE facts (
     movie_id int REFERENCES movies (id),
     oscar_id int REFERENCES oscars (id),
     imdb_id int REFERENCES ranking (id),
-    metacritc_id int REFERENCES ranking (id),
+    metacritic_id int REFERENCES ranking (id),
     rotten_tomatoes_id int REFERENCES ranking (id),
-    budget float,
+    fandango_id int REFERENCES ranking (id),
     duration int,
+    budget float,
     usa_income float,
     worldwide_income float
 );

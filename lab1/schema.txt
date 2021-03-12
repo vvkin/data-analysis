@@ -57,10 +57,11 @@ Ranking
     id
     type_id
     users_score
+    users_norm
+    users_votes
     critics_score
-    user_votes
-    critics_reviews
-    users_reviews
+    critics_norm
+    critics_votes
     
 FactTypes
     id

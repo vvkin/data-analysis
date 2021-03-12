@@ -11,6 +11,6 @@
     "movies": [["name", "writer_id", "director_id", "genre_id", 
         "language_id", "description", "company_id", "country_id"], "movie_id"],
     "ranking_types": [["type_name"], "type_id"],
-    "ranking": [["critics_votes", "users_votes",
-        "type_id", "avg_vote", "votes"], "imdb_id"]
+    "ranking": [["critics_reviews", "users_reviews",
+        "type_id", "users_score", "users_votes"], "imdb_id"]
 }

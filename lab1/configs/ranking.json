@@ -1,0 +1,44 @@
+{
+    "dates": [["year"], "date_id"],
+    "movies": [{"film": "name"}, "movie_id"],
+    "ranking": [
+        [   
+            {
+                "metacritic_type_id": "type_id",
+                "metacritic_user": "users_score",
+                "metacritic": "critics_score",
+                "metacritic_user_nom": "users_norm",
+                "metacritic_norm": "critics_norm",
+                "metacritic_user_vote_count": "users_votes"
+            },
+            "metacritic_id"
+        ],
+        [
+            {
+                "imdb_type_id": "type_id",
+                "imdb_user_vote_count": "users_votes",
+                "imdb_norm": "users_norm",
+                "imdb": "users_score"
+            }, 
+            "imdb_id"
+        ],
+        [
+            {
+                "rotten_tomatoes_type_id": "type_id",
+                "rotten_tomatoes_user": "users_score",
+                "rotten_tomatoes": "critics_score",
+                "rt_user_norm": "users_norm",
+                "rt_norm": "critics_norm"
+            },
+            "rotten_tomatoes_id"
+        ],
+        [
+            {
+                "fandango_type_id": "type_id",
+                "fandango_ratingvalue": "users_score",
+                "fandango_votes": "users_votes"
+            },
+            "fandango_id"
+        ]
+    ]
+}
