@@ -81,8 +81,8 @@ CREATE TABLE ranking (
 CREATE TABLE facts (
     id bigserial PRIMARY KEY,
     type_id int REFERENCES fact_types (id) NOT NULL,
-    date_id int REFERENCES dates (id),
-    movie_id int REFERENCES movies (id),
+    date_id int REFERENCES dates (id) NOT NULL,
+    movie_id int REFERENCES movies (id) NOT NULL,
     oscar_id int REFERENCES oscars (id),
     imdb_id int REFERENCES ranking (id),
     metacritic_id int REFERENCES ranking (id),
