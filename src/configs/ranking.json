@@ -1,7 +1,10 @@
 {
-    "dates": [["year"], "date_id"],
+    "dates": [
+        [["year"], "movie_date_id"],
+        [{"ranking_year": "year"}, "ranking_date_id"]
+    ],
     "movies": [{"film": "name"}, "movie_id"],
-    "ranking": [
+    "rankings": [
         [   
             {
                 "metacritic_type_id": "type_id",

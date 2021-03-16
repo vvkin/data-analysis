@@ -4,7 +4,7 @@
     "persons": [["name"], "person_id"],
     "dates": [
         [{"year_ceremony": "year"}, "date_id"],
-        [{"year_film": "year"}, "date_film_id"]
+        [{"year_film": "year"}, "movie_date_id"]
     ],
     "oscars": [["date_id", "person_id", "category_id", 
         "ceremony_number", "is_winner"], "oscar_id"]

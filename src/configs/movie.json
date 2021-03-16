@@ -7,10 +7,10 @@
         [{"director": "name"}, "director_id"],
         [{"writer": "name"}, "writer_id"]
     ],
-    "dates": [["year", "month", "day"], "date_id"],
+    "dates": [["year", "month", "day"], "movie_date_id"],
     "movies": [["name", "writer_id", "director_id", "genre_id", 
         "language_id", "description", "company_id", "country_id"], "movie_id"],
     "ranking_types": [["type_name"], "type_id"],
-    "ranking": [["critics_reviews", "users_reviews",
+    "rankings": [["critics_reviews", "users_reviews",
         "type_id", "users_score", "users_votes"], "imdb_id"]
 }

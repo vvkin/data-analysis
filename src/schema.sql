@@ -66,7 +66,7 @@ CREATE TABLE ranking_types (
     type_name varchar(255) NOT NULL
 );
 
-CREATE TABLE ranking (
+CREATE TABLE rankings (
     id serial PRIMARY KEY,
     type_id int REFERENCES ranking_types (id),
     users_score float,
@@ -81,13 +81,14 @@ CREATE TABLE ranking (
 CREATE TABLE facts (
     id bigserial PRIMARY KEY,
     type_id int REFERENCES fact_types (id) NOT NULL,
-    date_id int REFERENCES dates (id) NOT NULL,
     movie_id int REFERENCES movies (id) NOT NULL,
+    movie_date_id int REFERENCES dates (id) NOT NULL,
+    ranking_date_id int REFERENCES dates (id),
     oscar_id int REFERENCES oscars (id),
-    imdb_id int REFERENCES ranking (id),
-    metacritic_id int REFERENCES ranking (id),
-    rotten_tomatoes_id int REFERENCES ranking (id),
-    fandango_id int REFERENCES ranking (id),
+    imdb_id int REFERENCES rankings (id),
+    metacritic_id int REFERENCES rankings (id),
+    rotten_tomatoes_id int REFERENCES rankings (id),
+    fandango_id int REFERENCES rankings (id),
     duration int,
     budget float,
     usa_income float,
