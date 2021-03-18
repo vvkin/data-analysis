@@ -22,7 +22,8 @@ CREATE TABLE languages (
 
 CREATE TABLE persons (
     id serial PRIMARY KEY,
-    name varchar(500) NOT NULL
+    name varchar(500) NOT NULL,
+    previous_name varchar(500)
 );
 
 CREATE TABLE companies (
