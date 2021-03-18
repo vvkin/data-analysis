@@ -22,8 +22,8 @@ CREATE TABLE languages (
 
 CREATE TABLE persons (
     id serial PRIMARY KEY,
-    name varchar(500) NOT NULL,
-    previous_name varchar(500)
+    name varchar(255) NOT NULL,
+    previous_name varchar(255)
 );
 
 CREATE TABLE companies (
@@ -33,7 +33,6 @@ CREATE TABLE companies (
 
 CREATE TABLE movies (
     id serial PRIMARY KEY,
-    genre_id int REFERENCES genres (id),
     director_id int REFERENCES persons (id),
     writer_id int REFERENCES persons (id),
     country_id int REFERENCES countries (id),
@@ -41,6 +40,11 @@ CREATE TABLE movies (
     company_id int REFERENCES companies (id),
     name varchar(255) NOT NULL,
     description text
+);
+
+CREATE TABLE movies_genres (
+    movie_id int REFERENCES movies (id),
+    genre_id int REFERENCES genres (id)
 );
 
 CREATE TABLE categories (
@@ -51,9 +55,9 @@ CREATE TABLE categories (
 CREATE TABLE oscars (
     id serial PRIMARY KEY,
     date_id int REFERENCES dates (id),
-    person_id int REFERENCES persons (id),
     category_id int REFERENCES categories (id),
     ceremony_number int,
+    description text,
     is_winner boolean DEFAULT FALSE
 );
 
