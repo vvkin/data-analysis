@@ -35,11 +35,15 @@ CREATE TABLE movies (
     id serial PRIMARY KEY,
     director_id int REFERENCES persons (id),
     writer_id int REFERENCES persons (id),
-    country_id int REFERENCES countries (id),
     language_id int REFERENCES languages (id),
     company_id int REFERENCES companies (id),
     name varchar(255) NOT NULL,
     description text
+);
+
+CREATE TABLE movies_countries (
+    movie_id int REFERENCES movies (id),
+    country_id int REFERENCES countries (id)
 );
 
 CREATE TABLE movies_genres (
